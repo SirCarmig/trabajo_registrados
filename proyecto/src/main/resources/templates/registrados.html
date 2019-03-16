@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registrados</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+</head>
+    <div class="container">
+		<table>
+	        <thead>
+	          <tr>
+	              <th>Nombre</th>
+	              <th>Identificación</th>
+	              <th>Telefono</th>
+	              <th>Dirección</th>
+	              <th>Ciudad</th>
+	          </tr>
+	        </thead>
+	
+	        <tbody>
+	          <tr>
+	            <td th:text="${cliente.nombre}"></td>
+	            <td th:text="${cliente.id}"></td>
+	            <td th:text="${cliente.tel}"></td>
+	            <td th:text="${cliente.dir}"></td>
+	            <td th:text="${cliente.ciudad}"></td>
+	          </tr>
+	    	</tbody>
+    	</table>
+	</div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/registrados.js"></script>
+</body>
+</html>

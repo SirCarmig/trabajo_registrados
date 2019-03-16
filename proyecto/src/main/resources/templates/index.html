@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registrar cliente</title>
+    <link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+</head>
+<body>
+	<div class="container">
+		<form th:action="@{/registrar}" th:object = "${cliente}"  method ="post" >
+			<div class="row" >
+				<div class="col s12" > <h2>Registar un cliente</h2></div>
+		        <div class="input-field col s12">
+		         	<input name="nombre" placeholder="Llenar el nombre" id="nombre" type="text" class="validate">
+		         	<label for="nombre">Nombre</label>
+		        </div>
+		        <div class="input-field col s12">
+		      		<p>
+				     	<label>
+				        	<input value="cedula" name="tipo_id" type="radio" checked />
+				        	<span>Cédula</span>
+				     	</label>
+				    </p>
+		      		<p>
+				     	<label>
+				        	<input value="TI" name="tipo_id" type="radio" />
+				        	<span>Tarjeta de identidad</span>
+				     	</label>
+				    </p>
+		        </div>
+		        <div class="input-field col s12">
+		         	<input name="id" placeholder="Numero de identificación" id="id" type="number" class="validate">
+		         	<label for="id">ID</label>
+		        </div>
+		        <div class="input-field col s6">
+		         	<input name="tel" placeholder="Telefono" id="telefono" type="number" class="validate">
+		         	<label for="telefono">Teléfono</label>
+		        </div>
+		        <div class="input-field col s6">
+		         	<input name="dir" placeholder="Dirección" id="dir" type="text" class="validate">
+		         	<label for="dir">Dirección</label>
+		        </div>
+		        
+				<div class="input-field col s12">
+					<select name="ciudad">
+						<option value="" disabled selected>Escoja una ciudad</option>
+						<option value="Santa Marta">Santa Marta</option>
+						<option value="Bogota">Bogota</option>
+						<option value="Cali">Cali</option>
+					</select>
+					<label>Ciudad</label>
+				</div>
+		        <input class="btn" type="submit" value="Enviar">	
+			</div>
+		</form>
+	</div>
+	<script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
